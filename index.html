@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Backend Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ════════════ NAVIGATION ════════════ -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#hero" class="logo">~/dev<span>/marcosGonzalvez</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">about()</a></li>
+        <li><a href="#projects">projects[]</a></li>
+        <li><a href="#skills">skills{}</a></li>
+        <li><a href="#experience">git log</a></li>
+        <li><a href="#education">education</a></li>
+        <li><a href="#contact">POST /contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ════════════ HERO ════════════ -->
+  <section id="hero">
+    <div class="terminal-window">
+      <div class="terminal-bar">
+        <div class="terminal-dot r"></div>
+        <div class="terminal-dot y"></div>
+        <div class="terminal-dot g"></div>
+        <span>sqlcmd — 80×24</span>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <span class="terminal-line" id="line1">
+          <span class="prompt-symbol">❯ </span><span class="cmd">SELECT</span> <span class="result">*</span> <span class="cmd">FROM</span> <span class="result">developers</span>
+        </span>
+        <span class="terminal-line" id="line2">
+          <span class="cmd">  WHERE</span> <span class="result">passion</span> = <span class="string">'backend'</span>
+        </span>
+        <span class="terminal-line" id="line3">
+          <span class="cmd">  AND</span> <span class="result">avaiable</span> = <span class="json-bool">true</span>;
+        </span>
+        <span class="terminal-line" id="line4"><br></span>
+        <span class="terminal-line" id="line5">
+          <span class="comment">-- Ejecutando query...</span>
+        </span>
+        <span class="terminal-line" id="line6">
+          <span class="comment">-- 1 resultado encontrado</span>
+        </span>
+        <span class="terminal-line" id="line7"><br></span>
+        <span class="terminal-line" id="line8">
+          <span class="separator">┌──────────────────────────────────────────────┐</span>
+        </span>
+        <span class="terminal-line" id="line9">
+          <span class="separator">│</span>  <span class="json-key">nombre</span>    <span class="separator">│</span> <span class="highlight">Marcos Gonzalvez</span>
+        </span>
+        <span class="terminal-line" id="line10">
+          <span class="separator">│</span>  <span class="json-key">rol</span>       <span class="separator">│</span> <span class="string">Backend Developer</span>
+        </span>
+        <span class="terminal-line" id="line11">
+          <span class="separator">│</span>  <span class="json-key">stack</span>     <span class="separator">│</span> <span class="result">C# · .NET · SQL Server</span>
+        </span>
+        <span class="terminal-line" id="line12">
+          <span class="separator">│</span>  <span class="json-key">status</span>    <span class="separator">│</span> <span class="green" style="color:var(--green)">● Disponible</span>
+        </span>
+        <span class="terminal-line" id="line13">
+          <span class="separator">└──────────────────────────────────────────────┘</span>
+        </span>
+        <span class="terminal-line" id="line14"><br></span>
+        <span class="terminal-line" id="line15">
+          <span class="prompt-symbol">❯ </span><span class="cursor-blink"></span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════ ABOUT ════════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">Sobre mí</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            <span class="highlight-text">Backend developer</span> con enfoque en arquitectura de sistemas escalables, APIs robustas y bases de datos optimizadas.
+          </p>
+          <p>
+            Mi stack principal es <span class="highlight-text">C#/.NET</span> junto con <span class="highlight-text">SQL Server</span>, construyendo desde microservicios hasta aplicaciones monolíticas bien estructuradas. Creo en el código limpio, los tests, y en que una buena base de datos bien diseñada vale más que mil líneas de código.
+          </p>
+          <p>
+            Cuando un proyecto lo requiere, no me quedo solo en el back: manejo full stack con frameworks modernos de frontend para entregar soluciones completas.
+          </p>
+        </div>
+        <div class="about-json reveal">
+<span class="json-bracket">{</span>
+  <span class="json-key">"nombre"</span>: <span class="json-string">"Marcos Gonzalvez"</span>,
+  <span class="json-key">"ubicacion"</span>: <span class="json-string">"Argentina"</span>,
+  <span class="json-key">"experiencia_años"</span>: <span class="json-number">2</span>,
+  <span class="json-key">"enfoque"</span>: <span class="json-string">"Backend & Databases"</span>,
+  <span class="json-key">"idiomas"</span>: [
+    <span class="json-string">"Español"</span>,
+    <span class="json-string">"Inglés"</span>
+  ],
+  <span class="json-key">"open_to_work"</span>: <span class="json-bool">true</span>,
+  <span class="json-key">"café_diario"</span>: <span class="json-number">3</span>
+<span class="json-bracket">}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════ PROJECTS ════════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">Proyectos</div>
+
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="api">API/REST</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal" data-tags="backend,api">
+          <div class="project-header">
+            <span class="project-type">backend</span>
+            <div class="project-links">
+              <a href="https://github.com/Makuharg/ProductosAPI" target="_blank" title="GitHub">⟨/⟩</a>
+            </div>
+          </div>
+          <h3>API de Gestión de Productos</h3>
+          <p>API REST completa con CRUD de productos, validaciones de datos y documentación interactiva con Swagger. Conectada a SQL Server con Entity Framework Core.</p>
+          <div class="project-tags">
+            <span>C#</span><span>.NET 8</span><span>SQL Server</span><span>Entity Framework</span><span>Swagger</span>
+          </div>
+          <div class="project-arch">⚙ MVC · Entity Framework Core · Data Annotations</div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal" data-tags="fullstack">
+          <div class="project-header">
+            <span class="project-type fullstack">full stack - proximamente</span>
+            <div class="project-links">
+              <a title="GitHub">⟨/⟩</a>
+            </div>
+          </div>
+          <h3>Dashboard de Reportes Financieros</h3>
+          <p>Plataforma web para visualización de datos financieros en tiempo real con generación de reportes PDF y exportación a Excel.</p>
+          <div class="project-tags">
+            <span>C#</span><span>Blazor</span><span>SQL Server</span><span>SignalR</span><span>Chart.js</span>
+          </div>
+          <div class="project-arch">⚙ N-Tier Architecture · Stored Procedures · WebSockets</div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal" data-tags="backend,api">
+          <div class="project-header">
+            <span class="project-type">backend - proximamente</span>
+            <div class="project-links">
+              <a title="GitHub">⟨/⟩</a>
+            </div>
+          </div>
+          <h3>Motor de Procesamiento de Pagos</h3>
+          <p>Microservicio para procesamiento asincrónico de pagos con manejo de reintentos, dead letter queues y auditoría completa.</p>
+          <div class="project-tags">
+            <span>C#</span><span>.NET 8</span><span>RabbitMQ</span><span>SQL Server</span><span>Hangfire</span>
+          </div>
+          <div class="project-arch">⚙ Event-Driven · Outbox Pattern · Unit of Work</div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal" data-tags="fullstack">
+          <div class="project-header">
+            <span class="project-type fullstack">full stack - proximamente</span>
+            <div class="project-links">
+              <a title="GitHub">⟨/⟩</a>
+            </div>
+          </div>
+          <h3>Sistema de Turnos Online</h3>
+          <p>Aplicación web para reserva de turnos con calendario interactivo, notificaciones por email y panel de administración.</p>
+          <div class="project-tags">
+            <span>C#</span><span>ASP.NET MVC</span><span>SQL Server</span><span>JavaScript</span><span>Bootstrap</span>
+          </div>
+          <div class="project-arch">⚙ MVC Pattern · Entity Framework · SendGrid</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════ SKILLS ════════════ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">Skills & Tecnologías</div>
+
+      <!-- Backend -->
+      <div class="skills-category reveal">
+        <div class="skills-category-header">
+          <span class="skills-category-icon">⚡</span>
+          <h3>Backend</h3>
+        </div>
+        <div class="skills-chips">
+          <div class="skill-card cat-backend">C#</div>
+          <div class="skill-card cat-backend">.NET 8</div>
+          <div class="skill-card cat-backend">ASP.NET Core</div>
+          <div class="skill-card cat-backend">Entity Framework</div>
+          <div class="skill-card cat-backend">REST APIs</div>
+          <div class="skill-card cat-backend">MVC</div>
+          <div class="skill-card cat-backend">POO</div>
+          <div class="skill-card cat-backend">Java</div>
+          <div class="skill-card cat-backend">Node.js</div>
+          <div class="skill-card cat-backend">Express</div>
+        </div>
+      </div>
+
+      <!-- Databases -->
+      <div class="skills-category reveal">
+        <div class="skills-category-header">
+          <span class="skills-category-icon">🗄</span>
+          <h3>Databases</h3>
+        </div>
+        <div class="skills-chips">
+          <div class="skill-card cat-database">SQL Server</div>
+          <div class="skill-card cat-database">T-SQL</div>
+          <div class="skill-card cat-database">MySQL</div>
+          <div class="skill-card cat-database">PostgreSQL</div>
+          <div class="skill-card cat-database">MongoDB</div>
+        </div>
+      </div>
+
+      <!-- DevOps & Tools -->
+      <div class="skills-category reveal">
+        <div class="skills-category-header">
+          <span class="skills-category-icon">🔧</span>
+          <h3>DevOps & Tools</h3>
+        </div>
+        <div class="skills-chips">
+          <div class="skill-card cat-devops">Git / GitHub</div>
+          <div class="skill-card cat-devops">Azure</div>
+          <div class="skill-card cat-devops">Postman</div>
+        </div>
+      </div>
+
+      <!-- Frontend -->
+      <div class="skills-category reveal">
+        <div class="skills-category-header">
+          <span class="skills-category-icon">🎨</span>
+          <h3>Frontend</h3>
+        </div>
+        <div class="skills-chips">
+          <div class="skill-card cat-frontend">HTML / CSS</div>
+          <div class="skill-card cat-frontend">JavaScript</div>
+          <div class="skill-card cat-frontend">Bootstrap</div>
+          <div class="skill-card cat-frontend">React</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════ EXPERIENCE ════════════ -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">Experiencia — git log</div>
+
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-date">2025 — Presente</div>
+          <h3>Desarrollador Backend Freelance</h3>
+          <div class="timeline-company">Proyectos independientes</div>
+          <p>Desarrollo de aplicaciones de escritorio y APIs REST. 
+              Construcción de herramientas internas para gestión empresarial 
+              y automatización de procesos.</p>
+          <div class="timeline-tags">
+            <span>C#</span><span>.NET 8</span><span>SQL Server</span><span>ASP.NET Core</span><span>Azure</span>
+          </div>
+          <div class="commit-hash">commit 0a1b2c3 — init: first commit ever</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════ EDUCATION ════════════ -->
+  <section id="education">
+    <div class="container">
+      <div class="section-label">Estudios</div>
+
+      <div class="education-card reveal">
+        <div class="education-status">En curso</div>
+        <h3>Tecnicatura en Desarrollo de Software</h3>
+        <div class="education-university">Universidad — ISTEA</div>
+        <div class="education-period">2025 — Presente (estimado 2027)</div>
+        <p class="education-description">
+          Formación en desarrollo de software, estructuras de datos, algoritmos, bases de datos y arquitectura de sistemas. Enfoque en ingeniería de software y desarrollo backend.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <br>
+
+      <div class="education-card reveal">
+        <div class="education-status">En curso</div>
+        <h3>Tecnicatura en Desarrollo de Software</h3>
+        <div class="education-university">Instituto London</div>
+        <div class="education-period">FEBRERO 2025 — Presente (estimado 2027)</div>
+        <p class="education-description">
+          Estudiando ingles desde lo mas basico a avanzado, con enfoque en vocabulario técnico para desarrollo de software y comunicación profesional en el ámbito tecnológico.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════ CONTACT ════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">Contacto</div>
+
+      <div class="contact-api reveal">
+        <div class="endpoint-header">
+          <span class="method-badge">POST</span>
+          <span class="endpoint-url">/api/v1/contact</span>
+        </div>
+
+        <div class="form-field">
+          <label>"nombre" <span class="type">: string</span> <span class="required">*required</span></label>
+          <input type="text" id="contact-nombre" placeholder="Tu nombre">
+        </div>
+
+        <div class="form-field">
+          <label>"email" <span class="type">: string</span> <span class="required">*required</span></label>
+          <input type="email" id="contact-email" placeholder="tu@email.com">
+        </div>
+
+        <div class="form-field">
+          <label>"asunto" <span class="type">: string</span></label>
+          <input type="text" id="contact-asunto" placeholder="Propuesta de trabajo, consulta, etc.">
+        </div>
+
+        <div class="form-field">
+          <label>"mensaje" <span class="type">: string</span> <span class="required">*required</span></label>
+          <textarea id="contact-mensaje" placeholder="Contame sobre tu proyecto..."></textarea>
+        </div>
+
+        <button class="submit-btn" id="submitBtn">
+          Enviar Request →
+        </button>
+
+        <div class="response-preview" id="responsePreview" style="display:none;">
+          <span class="status-200">HTTP 200 OK</span><br>
+          <span class="json-bracket">{</span><br>
+          &nbsp;&nbsp;<span class="json-key">"status"</span>: <span class="json-string">"success"</span>,<br>
+          &nbsp;&nbsp;<span class="json-key">"message"</span>: <span class="json-string">"¡Gracias! Te respondo pronto."</span><br>
+          <span class="json-bracket">}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════ FOOTER ════════════ -->
+  <footer>
+    <p>Hecho con <span style="color:var(--accent);">código</span> y <span style="color:var(--accent);">café</span> — 2026</p>
+    <p style="margin-top:0.5rem;">
+      <a href="https://github.com/Makuharg">GitHub</a> · <a href="https://www.linkedin.com/in/marcosgondesign/">LinkedIn</a>
+    </p>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
