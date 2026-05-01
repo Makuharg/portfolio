@@ -384,6 +384,27 @@ section {
 
 .project-links a:hover { color: var(--accent); }
 
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  transition: var(--transition);
+}
+
+.btn-github:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
 .project-card h3 {
   font-family: var(--font-sans);
   font-size: 1.1rem;
